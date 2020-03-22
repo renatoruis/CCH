@@ -1,0 +1,35 @@
+{
+     "Comment": "Creating Alias resource record sets in Route 53",
+     "Changes": [
+                {"Action": "CREATE",
+                "ResourceRecordSet": {
+                        "Name": "traefik.bardodevops.com.br",
+                        "Type": "CNAME",
+                        "AliasTarget":{
+                                "HostedZoneId": "Z29ONBW16LFJLR",
+                                "DNSName": "a3f380e8e529811e9912b129753dfd36-2044063420.us-east-1.elb.amazonaws.com",
+                                "EvaluateTargetHealth": false
+                          }}
+                      },
+                {"Action": "CREATE",
+                "ResourceRecordSet": {
+                            "Name": "vote.bardodevops.com.br",
+                            "Type": "CNAME",
+                            "AliasTarget":{
+                                    "HostedZoneId": "Z29ONBW16LFJLR",
+                                    "DNSName": "a3f380e8e529811e9912b129753dfd36-2044063420.us-east-1.elb.amazonaws.com",
+                                    "EvaluateTargetHealth": false
+                              }}
+                          },
+                {"Action": "CREATE",
+                "ResourceRecordSet": {
+                            "Name": "result.bardodevops.com.br",
+                            "Type": "CNAME",
+                            "AliasTarget":{
+                                    "HostedZoneId": "Z29ONBW16LFJLR",
+                                    "DNSName": "a3f380e8e529811e9912b129753dfd36-2044063420.us-east-1.elb.amazonaws.com",
+                                    "EvaluateTargetHealth": false
+                              }}
+                          }
+                ]
+}

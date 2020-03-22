@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pudim">
+    <meta name="author" content="Renato Ruis">
+
+    <title>Research about pudding</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/floating-labels/floating-labels.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+        <form class="form-signin" method='POST' action='/'>
+
+          <div class="text-center">
+            <img class="" src="https://pngimage.net/wp-content/uploads/2018/05/bolo-pudim-png-3.png">
+            <h1 class="h3 font-weight-normal">Pudim</h1>
+            <p>What's your favorite pudding flavor?</p>
+
+            {% if flavor %}
+              <div class="alert alert-success" role="alert">
+                <p>great {{ flavor }} is good!</p>
+              </div>
+ 
+            {% else %}
+
+            {% endif %}
+
+          </div>
+    
+          <div class="form-group" align="center">
+            <input type="text"  class="form-control-lg" name='flavour' required>
+          </div>
+          <div class="form-group" align="center">
+            <button class="btn btn-lg btn-primary" type="submit">Send</button>
+          </div>
+    
+          
+          <p class="text-muted text-center">&copy; Chalenge DevOps/SRE QuintoAndar | Renato Ruis</p>
+        </form>
+    </div>
+
+  </body>
+</html>

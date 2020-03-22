@@ -1,0 +1,31 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: vote-ingress
+  namespace: vote
+spec:
+  rules:
+  - host: vote.bardodevops.com.br
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: vote
+          servicePort: vote-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vote
+  namespace: vote
+spec:
+  type: NodePort
+  ports:
+  - name: "vote-service"
+    port: 5000
+    targetPort: 80
+    nodePort: 31000
+  selector:
+    app: vote
+  

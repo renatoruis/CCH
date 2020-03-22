@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: result
+  namespace: vote
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: result
+    spec:
+      containers:
+      - image: renatoruis/result-app:0.1
+        name: result
+        imagePullPolicy: Always
